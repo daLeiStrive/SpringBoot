@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8" />
+<div th:fragment="copy">
+	<!-- zTree  -->
+	<link rel="stylesheet" th:href="@{{zyPath}/istyle/libs/zTree/demo.css(zyPath=${application.zyPath})}" type="text/css">
+	<link rel="stylesheet" th:href="@{{zyPath}/istyle/libs/zTree/zTreeStyle/zTreeStyle.css(zyPath=${application.zyPath})}" type="text/css">
+	
+	<script type="text/javascript" th:src="@{{zyPath}/istyle/libs/zTree/jquery.ztree.core-3.5.js(zyPath=${application.zyPath})}"></script>
+	<script type="text/javascript" th:src="@{{zyPath}/istyle/libs/zTree/jquery.ztree.excheck-3.5.js(zyPath=${application.zyPath})}"></script>
+
+</div>

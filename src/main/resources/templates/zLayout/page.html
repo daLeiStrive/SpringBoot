@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8" />
+<div th:fragment="copy">
+	<div class="layui-form" style="margin-top: -10px;">
+		<span id="form_page"></span>
+		每页
+		<input id="page_size" onkeyup="this.value=this.value.replace(/\D/, '');" type="number" min="1" th:value="${page.psize}" class="layui-input" style="width: 60px; height: 30px; display: inline;">
+		行,共
+		<span th:text="${page.pcount}"></span>
+		条数据
+	</div>
+	<script type="text/javascript" th:inline="javascript">
+		layui.define([ 'element', 'form', 'layer', 'laypage' ], function(exports) {
+			var element = layui.element();
+			var form = layui.form();
+			var layer = layui.layer;
+			var laypage = layui.laypage;
+
+			//var pindex = "${requestScope.page.pindex}";// 当前页
+			//var ptotalpages = "${requestScope.page.ptotalpages}";// 总页数
+			//var pcount = "${requestScope.page.pcount}";// 总记录数
+			//var psize = "${requestScope.page.psize}";// 每一页的记录数
+			
+			var pindex = [[${page.pindex}]];// 当前页
+			var ptotalpages =[[${page.ptotalpages}]];// 总页数
+			var pcount = [[${page.pcount}]];// 总记录数
+			var psize = [[${page.psize}]];// 每一页的记录数
+
+			// 分页
+			laypage({
+				cont : 'form_page', // 页面上的id
+				pages : ptotalpages,//总页数
+				curr : pindex,//当前页。
+				skip : true,
+				jump : function(obj, first) {
+
+					$("#pindex").val(obj.curr);//设置当前页
+					$("#psize").val($("#page_size").val())
+					//防止无限刷新,
+					//只有监听到的页面index 和当前页不一样是才出发分页查询
+					if (obj.curr != pindex || psize != $("#psize").val()) {
+						document.f1.submit();
+					}
+				}
+			});
+		});
+	</script>
+</div>
+</html>

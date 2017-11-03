@@ -1,0 +1,64 @@
+/* 界面上主容器 */
+.contain {
+	margin-left: 15px;
+	margin-top: 10px;
+}
+/*  list界面上查询条件的 li */
+.list-search li {
+	list-style: none;
+	float: left;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	/* border: solid 1px; */
+}
+
+.layui-form-label {
+	width: 60px;
+}
+
+/* 所有layui的文本框获取焦点变化 */
+.layui-input:focus {
+	border-color: #66afe9;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px
+		rgba(102, 175, 233, .6);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px
+		rgba(102, 175, 233, .6);
+}
+/* 查询修改页面*/
+.input_search {
+	width: 150px;
+}
+/* 添加修改页面文本框覆盖 */
+.input_save {
+	width: 250px;
+	display: inline; /* 因为校验信息要和文本框显示在一行 */
+}
+
+.bg {
+	background-color: #CCC;
+}
+
+.butedit, .butdelete {
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+}
+/* 项目状态---正常的颜色 */
+.success {
+	background-color: #dff0d8;
+}
+/* 项目状态---关闭的颜色 */
+.warning {
+	background-color: #fcf8e3;
+}
+/* 项目状态---测试中的颜色 */
+.danger {
+	background-color: #f2dede;
+}
+/* 省市区下拉框样式 */
+.addr_ssq {
+	width: 120px;
+	float: left;
+	margin-left: 10px;
+}

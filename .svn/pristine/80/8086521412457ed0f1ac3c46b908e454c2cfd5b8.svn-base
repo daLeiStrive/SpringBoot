@@ -1,0 +1,10 @@
+layui.define([ 'element', 'form', 'layer', 'laypage' ], function(exports) {
+	var element = layui.element;
+	var form = layui.form;
+	var layer = layui.layer;
+	var laypage = layui.laypage;
+	var $ = layui.jquery;
+
+
+
+});

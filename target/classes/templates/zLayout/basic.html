@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8" />
+<div th:fragment="copy">
+	
+	<link rel="shortcut icon" th:href="@{{zyPath}/istyle/ico/favicon.ico(zyPath=${application.zyPath}) }" />
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<!-- layui -->
+	<script th:src="@{{zyPath}/istyle/libs/layui-v2.1.5/layui/layui.js(zyPath=${application.zyPath}) }" type="text/javascript" charset="utf-8"></script>
+	<link th:href="@{{zyPath}/istyle/libs/layui-v2.1.5/layui/css/layui.css(zyPath=${application.zyPath}) }" rel="stylesheet" type="text/css" />
+
+	<!-- 表单校验  -->
+	<link th:href="@{{zyPath}/istyle/libs/validate/Validform.css(zyPath=${application.zyPath}) }" rel="stylesheet" type="text/css" />
+	<script th:src="@{{zyPath}/istyle/libs/validate/placeholder.js(zyPath=${application.zyPath}) }" type="text/javascript" charset="utf-8"></script>
+	<script th:src="@{{zyPath}/istyle/libs/validate/Validform_v5.3.2.js(zyPath=${application.zyPath}) }" type="text/javascript" charset="utf-8"></script>
+
+	<link rel="stylesheet" th:href="@{/istyle/css/style.css}" />
+	<link rel="stylesheet" th:href="@{/istyle/css/global.css}" />
+	<script th:src="@{/istyle/js/common.js}" type="text/javascript" charset="utf-8"></script>
+
+	<input type="hidden" id="basePath" th:value="${application.rpath}"  />
+</div>
